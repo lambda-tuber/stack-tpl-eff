@@ -1,0 +1,109 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 36dc9d6c2aecd93de3928c83a40aa5942b54bca68b777ec1f1f257c8ab0899b4
+
+name:           sample
+version:        0.0.1.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/sample#readme>
+homepage:       https://github.com/githubuser/sample#readme
+bug-reports:    https://github.com/githubuser/sample/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/sample
+
+library
+  exposed-modules:
+      Sample.Application
+      Sample.Constant
+      Sample.Control
+      Sample.Type
+      Sample.Utility
+  other-modules:
+      Paths_sample
+  hs-source-dirs:
+      src
+  default-extensions: BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse EmptyDataDecls ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns OverloadedLabels PartialTypeSignatures PatternGuards PolyKinds RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TupleSections TypeFamilies TypeOperators TypeSynonymInstances ViewPatterns
+  ghc-options: -Wall -fno-warn-unused-do-bind -fno-warn-name-shadowing -fno-warn-orphans -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , data-default
+    , extensible
+    , extensible-skeleton
+    , hslogger
+    , lens
+    , mtl
+    , optparse-applicative
+    , safe-exceptions
+    , text
+    , yaml
+  default-language: Haskell2010
+
+executable sample
+  main-is: Main.hs
+  other-modules:
+      Paths_sample
+  hs-source-dirs:
+      app
+  default-extensions: BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse EmptyDataDecls ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns OverloadedLabels PartialTypeSignatures PatternGuards PolyKinds RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TupleSections TypeFamilies TypeOperators TypeSynonymInstances ViewPatterns
+  ghc-options: -Wall -fno-warn-unused-do-bind -fno-warn-name-shadowing -fno-warn-orphans -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , data-default
+    , extensible
+    , extensible-skeleton
+    , hslogger
+    , lens
+    , mtl
+    , optparse-applicative
+    , safe-exceptions
+    , sample
+    , text
+    , yaml
+  default-language: Haskell2010
+
+test-suite sample-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Sample.UtilitySpec
+      Spec.Sample.Constant
+      Paths_sample
+  hs-source-dirs:
+      test
+  default-extensions: BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse EmptyDataDecls ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns OverloadedLabels PartialTypeSignatures PatternGuards PolyKinds RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TupleSections TypeFamilies TypeOperators TypeSynonymInstances ViewPatterns
+  ghc-options: -Wall -fno-warn-unused-do-bind -fno-warn-name-shadowing -fno-warn-orphans -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , data-default
+    , extensible
+    , extensible-skeleton
+    , hslogger
+    , hspec
+    , lens
+    , mtl
+    , optparse-applicative
+    , safe-exceptions
+    , sample
+    , text
+    , yaml
+  default-language: Haskell2010
